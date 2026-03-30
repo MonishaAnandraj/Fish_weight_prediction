@@ -3,6 +3,101 @@ import pandas as pd
 import numpy as np
 import joblib
 
+st.markdown("""
+<style>
+
+/* Full Background Image */
+.stApp {
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* DARK OVERLAY */
+.stApp::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.70);
+    z-index: 0;
+}
+
+/* CONTENT */
+.block-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Transparent main container */
+.block-container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    margin:50px;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 40px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Text */
+.stMarkdown p {
+    color: #f0f8ff;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Labels */
+label {
+    color: #000000 !important;
+    font-weight: 600;
+}
+
+/* Input fields */
+.stNumberInput input, .stSelectbox div[data-baseweb="select"] {
+    border-radius: 10px;
+}
+
+/* Button */
+.stButton>button {
+    background: linear-gradient(90deg, #36d1dc, #5b86e5);
+    color: white;
+    font-size: 18px;
+    border-radius: 12px;
+    padding: 10px 20px;
+    border: none;
+    transition: 0.3s;
+}
+
+.stButton>button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #5b86e5, #36d1dc);
+}
+
+/* Result box */
+.stSuccess {
+    background-color: rgba(0, 255, 200, 0.25);
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 18px;
+    color: #003333;
+}
+
+/* Footer */
+footer {
+    visibility: hidden;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(page_title="🐟 Fish Weight Predictor", layout="centered")
 
